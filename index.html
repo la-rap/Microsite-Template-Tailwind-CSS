@@ -1,836 +1,616 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Figueroa Park | Downtown Los Angeles</title>
-		<script src="https://cdn.tailwindcss.com"></script>
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-		<script>
-			tailwind.config = {
-				theme: {
-					extend: {
-						colors: {
-							'park-green': '#0f3d2e' /* main: dark green */,
-							'park-amber': '#dc2626' /* secondary: red color */,
-						},
-					},
-				},
-			};
-		</script>
-	</head>
-	<body class="font-sans">
-		<header>
-			<nav class="fixed top-0 w-full bg-white shadow-md z-50">
-				<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-					<div class="flex justify-between items-center h-16">
-						<!-- logo -->
-						<div class="flex-shrink-0">
-							<h1 class="text-3xl font-bold text-park-green">
-								Figueroa Park
-							</h1>
-						</div>
-						<!-- Navigation Links -->
-						<div class="hidden md:block">
-							<div class="ml-10 flex items-baseline space-x-4">
-								<a
-									href="#home"
-									class="text-gray-700 hover:text-park-green px-2 py-2 text-sm font-medium">
-									Home
-								</a>
-								<a
-									href="#about"
-									class="text-gray-700 hover:text-park-green px-3 py-2 text-sm font-medium">
-									About
-								</a>
-								<a
-									href="#team"
-									class="text-gray-700 hover:text-park-green px-3 py-2 text-sm font-medium">
-									Staff
-								</a>
-								<a
-									href="#packages"
-									class="text-gray-700 hover:text-park-green px-3 py-2 text-sm font-medium">
-									Highlights
-								</a>
-								<a
-									href="#blogs"
-									class="text-gray-700 hover:text-park-green px-3 py-2 text-sm font-medium">
-									News
-								</a>
-								<a
-									href="#contact"
-									class="text-gray-700 hover:text-park-green px-3 py-2 text-sm font-medium">
-									Contact
-								</a>
-							</div>
-						</div>
-						<div class="hidden md:block">
-							<button
-								class="bg-gray-200 text-gray-800 px-4 py-2 rounded-md text-sm font-medium hover:bg-gray-300 transition duration-200">
-								Get Updates
-							</button>
-						</div>
-					</div>
-				</div>
-			</nav>
-		</header>
-		<!-- Hero Banner Section -->
-		<section
-			class="relative h-screen flex items-center justify-center"
-			id="home">
-			<!-- Background Image -->
-			<div
-				class="absolute inset-0 bg-cover bg-center bg-no-repeat"
-				style="background-image: url('/imgs/park-bg.jpg')">
-				<!-- Dark Overlay -->
-				<div class="absolute inset-0 bg-black bg-opacity-50"></div>
-			</div>
-			<div class="relative z-10 text-center text-white px-4">
-				<h1 class="text-5xl md:text-7xl font-bold mb-6">
-					Welcome to Figueroa Park
-				</h1>
-				<p
-					class="text-xl md:text-2xl mb-8 max-w-4xl mx-auto leading-relaxed">
-					A fictional green oasis in Figueroa Plaza, Downtown Los
-					Angeles. Made for morning walks, lunchtime resets, community
-					events, and sunset views.
-				</p>
-				<button
-					class="bg-park-amber text-white px-8 py-4 rounded-lg text-lg font-semibold hover:opacity-95 hover:scale-105 transform transition duration-300 shadow-lg">
-					Plan Your Visit
-				</button>
-			</div>
-		</section>
-		<!-- About Us Section -->
-		<section id="about" class="py-20 bg-gray-50">
-			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-				<!-- Section Header -->
-				<div class="text-center mb-16">
-					<h2
-						class="text-4xl md:text-5xl font-bold text-park-green mb-6">
-						Discover Figueroa Park
-					</h2>
-					<p class="text-xl text-gray-600 max-w-4xl mx-auto">
-						Located in the heart of Figueroa Plaza, Figueroa Park is
-						a fictional urban park designed for everyone! families,
-						runners, office crowds, and weekend explorers. Come for
-						the shade, stay for the community.
-					</p>
-				</div>
-				<!-- Feature Cards Grid -->
-				<div
-					class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-					<!-- Card 1 -->
-					<div
-						class="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition duration-300">
-						<div class="text-park-green mb-4">
-							<i class="fas fa-comments text-5xl"></i>
-						</div>
-						<h3 class="text-xl font-semibold text-park-green mb-4">
-							Visitor Info
-						</h3>
-						<p class="text-gray-600">
-							Get directions, check park rules, and learn what’s
-							happening today, quick answers for a smooth visit.
-						</p>
-					</div>
-					<!-- Card 2 -->
-					<div
-						class="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition duration-300">
-						<div class="text-park-green mb-4">
-							<i class="fas fa-user-friends text-5xl"></i>
-						</div>
-						<h3 class="text-xl font-semibold text-park-green mb-4">
-							Community Events
-						</h3>
-						<p class="text-gray-600">
-							From weekend yoga to movie nights, Figueroa Park
-							brings Downtown neighbors together all year.
-						</p>
-					</div>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Figueroa Park | Downtown Los Angeles</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            "park-green": "#0f3d2e" /* main: dark green */,
+                            "park-amber": "#dc2626" /* secondary: red color */,
+                        },
+                    },
+                },
+            };
+        </script>
+    </head>
+    <body class="font-sans">
+        <header>
+            <nav class="fixed top-0 w-full bg-white shadow-md z-50">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="flex justify-between items-center h-16">
+                        <!-- logo -->
+                        <div class="flex-shrink-0">
+                            <h1 class="text-3xl font-bold text-park-green">Figueroa Park</h1>
+                        </div>
+                        <!-- Navigation Links -->
+                        <div class="hidden md:block">
+                            <div class="ml-10 flex items-baseline space-x-4">
+                                <a
+                                    href="#home"
+                                    class="text-gray-700 hover:text-park-green px-2 py-2 text-sm font-medium">
+                                    Home
+                                </a>
+                                <a
+                                    href="#about"
+                                    class="text-gray-700 hover:text-park-green px-3 py-2 text-sm font-medium">
+                                    About
+                                </a>
+                                <a
+                                    href="#team"
+                                    class="text-gray-700 hover:text-park-green px-3 py-2 text-sm font-medium">
+                                    Staff
+                                </a>
+                                <a
+                                    href="#packages"
+                                    class="text-gray-700 hover:text-park-green px-3 py-2 text-sm font-medium">
+                                    Highlights
+                                </a>
+                                <a
+                                    href="#blogs"
+                                    class="text-gray-700 hover:text-park-green px-3 py-2 text-sm font-medium">
+                                    News
+                                </a>
+                                <a
+                                    href="#contact"
+                                    class="text-gray-700 hover:text-park-green px-3 py-2 text-sm font-medium">
+                                    Contact
+                                </a>
+                            </div>
+                        </div>
+                        <div class="hidden md:block">
+                            <button
+                                class="bg-gray-200 text-gray-800 px-4 py-2 rounded-md text-sm font-medium hover:bg-gray-300 transition duration-200">
+                                Get Updates
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <!-- Hero Banner Section -->
+        <section class="relative h-screen flex items-center justify-center" id="home">
+            <!-- Background Image -->
+            <div
+                class="absolute inset-0 bg-cover bg-center bg-no-repeat"
+                style="background-image: url('/imgs/park-bg.jpg')">
+                <!-- Dark Overlay -->
+                <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+            </div>
+            <div class="relative z-10 text-center text-white px-4">
+                <h1 class="text-5xl md:text-7xl font-bold mb-6">Welcome to Figueroa Park</h1>
+                <p class="text-xl md:text-2xl mb-8 max-w-4xl mx-auto leading-relaxed">
+                    A fictional green oasis in Figueroa Plaza, Downtown Los Angeles. Made for morning walks, lunchtime
+                    resets, community events, and sunset views.
+                </p>
+                <button
+                    class="bg-park-amber text-white px-8 py-4 rounded-lg text-lg font-semibold hover:opacity-95 hover:scale-105 transform transition duration-300 shadow-lg">
+                    Plan Your Visit
+                </button>
+            </div>
+        </section>
+        <!-- About Us Section -->
+        <section id="about" class="py-20 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <!-- Section Header -->
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-5xl font-bold text-park-green mb-6">Discover Figueroa Park</h2>
+                    <p class="text-xl text-gray-600 max-w-4xl mx-auto">
+                        Located in the heart of Figueroa Plaza, Figueroa Park is a fictional urban park designed for
+                        everyone! families, runners, office crowds, and weekend explorers. Come for the shade, stay for
+                        the community.
+                    </p>
+                </div>
+                <!-- Feature Cards Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Card 1 -->
+                    <div class="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition duration-300">
+                        <div class="text-park-green mb-4">
+                            <i class="fas fa-comments text-5xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-park-green mb-4">Visitor Info</h3>
+                        <p class="text-gray-600">
+                            Get directions, check park rules, and learn what’s happening today, quick answers for a
+                            smooth visit.
+                        </p>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition duration-300">
+                        <div class="text-park-green mb-4">
+                            <i class="fas fa-user-friends text-5xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-park-green mb-4">Community Events</h3>
+                        <p class="text-gray-600">
+                            From weekend yoga to movie nights, Figueroa Park brings Downtown neighbors together all
+                            year.
+                        </p>
+                    </div>
 
-					<!-- Card 3 -->
-					<div
-						class="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition duration-300">
-						<div class="text-park-green mb-4">
-							<i class="fas fa-rocket text-5xl"></i>
-						</div>
-						<h3 class="text-xl font-semibold text-park-green mb-4">
-							Easy Access
-						</h3>
-						<p class="text-gray-600">
-							Walk, bike, or hop off transit—Figueroa Plaza is
-							central, and the park is designed to be easy to
-							navigate.
-						</p>
-					</div>
+                    <!-- Card 3 -->
+                    <div class="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition duration-300">
+                        <div class="text-park-green mb-4">
+                            <i class="fas fa-rocket text-5xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-park-green mb-4">Easy Access</h3>
+                        <p class="text-gray-600">
+                            Walk, bike, or hop off transit—Figueroa Plaza is central, and the park is designed to be
+                            easy to navigate.
+                        </p>
+                    </div>
 
-					<!-- Card 4 -->
-					<div
-						class="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition duration-300">
-						<div class="text-park-green mb-4">
-							<i class="fas fa-star text-5xl"></i>
-						</div>
-						<h3 class="text-xl font-semibold text-park-green mb-4">
-							Clean & Welcoming
-						</h3>
-						<p class="text-gray-600">
-							A bright, comfortable space with regular maintenance
-							and friendly park staff so you can relax.
-						</p>
-					</div>
-				</div>
-			</div>
-		</section>
-		<!-- Top Destinations Section -->
-		<section id="packages" class="py-20 bg-white">
-			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-				<!-- Section Header -->
-				<div class="text-center mb-16">
-					<h2
-						class="text-4xl md:text-5xl font-bold text-park-green mb-6">
-						Park Highlights
-					</h2>
-				</div>
-				<!-- Destination Cards Grid -->
-				<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-					<!-- Card 1: Picnic Grove -->
-					<div
-						class="bg-gray-900 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300 group">
-						<!-- Image -->
-						<div
-							class="h-64 bg-cover bg-center transition-transform duration-300 group-hover:scale-110"
-							style="
-								background-image: url('/imgs/picnic-park.jpg');
-							"></div>
-						<!-- Content -->
-						<div class="p-8">
-							<h3 class="text-2xl font-bold text-white mb-4">
-								Picnic Grove
-							</h3>
-							<p class="text-gray-300">
-								Shaded tables, open lawn space, and a calm
-								corner to eat, read, or meet up with friends in
-								the city.
-							</p>
-						</div>
-					</div>
-					<!-- Card 2: Play & Splash Zone -->
-					<div
-						class="bg-gray-900 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300 group">
-						<div
-							class="h-64 bg-cover bg-center transition-transform duration-300 group-hover:scale-110"
-							style="
-								background-image: url('/imgs/play-splash-zone.jpg');
-							"></div>
-						<div class="p-8">
-							<h3 class="text-2xl font-bold text-white mb-4">
-								Play & Splash Zone
-							</h3>
-							<p class="text-gray-300">
-								A family-friendly area with a modern playground
-								and a seasonal splash feature—perfect for warm
-								LA afternoons.
-							</p>
-						</div>
-					</div>
-					<!-- Card 3: Garden Walk -->
-					<div
-						class="bg-gray-900 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300 group">
-						<div
-							class="h-64 bg-cover bg-center transition-transform duration-300 group-hover:scale-110"
-							style="
-								background-image: url('/imgs/garden-walk.jpg');
-							"></div>
-						<div class="p-8">
-							<h3 class="text-2xl font-bold text-white mb-4">
-								Garden Walk
-							</h3>
-							<p class="text-gray-300">
-								A quiet loop with native plants, seating nooks,
-								and skyline glimpses! great for a quick reset.
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<!-- How It Works Section -->
-		<section class="py-20 bg-gray-50">
-			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-				<!-- Section Header -->
-				<div class="text-center mb-16">
-					<h2
-						class="text-4xl md:text-5xl font-bold text-park-green mb-6">
-						Plan Your Visit
-					</h2>
-					<p class="text-xl text-gray-600 max-w-4xl mx-auto">
-						Make the most of your time at our fictional Downtown LA
-						park with a simple, no-stress plan.
-					</p>
-				</div>
-				<!-- Steps Container -->
-				<div
-					class="flex flex-col md:flex-row items-center justify-between">
-					<!-- Step 1 -->
-					<div class="text-center mb-8 md:mb-0">
-						<div
-							class="bg-park-green text-white rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mx-auto mb-4">
-							1
-						</div>
-						<h3 class="text-xl font-semibold text-park-green mb-4">
-							Pick a Time
-						</h3>
-						<p class="text-gray-600 max-w-sm">
-							Mornings for calm walks, midday for lunch breaks,
-							evenings for golden-hour city views.
-						</p>
-					</div>
+                    <!-- Card 4 -->
+                    <div class="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition duration-300">
+                        <div class="text-park-green mb-4">
+                            <i class="fas fa-star text-5xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-park-green mb-4">Clean & Welcoming</h3>
+                        <p class="text-gray-600">
+                            A bright, comfortable space with regular maintenance and friendly park staff so you can
+                            relax.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Top Destinations Section -->
+        <section id="packages" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <!-- Section Header -->
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-5xl font-bold text-park-green mb-6">Park Highlights</h2>
+                </div>
+                <!-- Destination Cards Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Card 1: Picnic Grove -->
+                    <div
+                        class="bg-gray-900 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300 group">
+                        <!-- Image -->
+                        <div
+                            class="h-64 bg-cover bg-center transition-transform duration-300 group-hover:scale-110"
+                            style="background-image: url('/imgs/picnic-park.jpg')"></div>
+                        <!-- Content -->
+                        <div class="p-8">
+                            <h3 class="text-2xl font-bold text-white mb-4">Picnic Grove</h3>
+                            <p class="text-gray-300">
+                                Shaded tables, open lawn space, and a calm corner to eat, read, or meet up with friends
+                                in the city.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Card 2: Play & Splash Zone -->
+                    <div
+                        class="bg-gray-900 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300 group">
+                        <div
+                            class="h-64 bg-cover bg-center transition-transform duration-300 group-hover:scale-110"
+                            style="background-image: url('/imgs/play-splash-zone.jpg')"></div>
+                        <div class="p-8">
+                            <h3 class="text-2xl font-bold text-white mb-4">Play & Splash Zone</h3>
+                            <p class="text-gray-300">
+                                A family-friendly area with a modern playground and a seasonal splash feature—perfect
+                                for warm LA afternoons.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Card 3: Garden Walk -->
+                    <div
+                        class="bg-gray-900 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300 group">
+                        <div
+                            class="h-64 bg-cover bg-center transition-transform duration-300 group-hover:scale-110"
+                            style="background-image: url('/imgs/garden-walk.jpg')"></div>
+                        <div class="p-8">
+                            <h3 class="text-2xl font-bold text-white mb-4">Garden Walk</h3>
+                            <p class="text-gray-300">
+                                A quiet loop with native plants, seating nooks, and skyline glimpses! great for a quick
+                                reset.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- How It Works Section -->
+        <section class="py-20 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <!-- Section Header -->
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-5xl font-bold text-park-green mb-6">Plan Your Visit</h2>
+                    <p class="text-xl text-gray-600 max-w-4xl mx-auto">
+                        Make the most of your time at our fictional Downtown LA park with a simple, no-stress plan.
+                    </p>
+                </div>
+                <!-- Steps Container -->
+                <div class="flex flex-col md:flex-row items-center justify-between">
+                    <!-- Step 1 -->
+                    <div class="text-center mb-8 md:mb-0">
+                        <div
+                            class="bg-park-green text-white rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+                            1
+                        </div>
+                        <h3 class="text-xl font-semibold text-park-green mb-4">Pick a Time</h3>
+                        <p class="text-gray-600 max-w-sm">
+                            Mornings for calm walks, midday for lunch breaks, evenings for golden-hour city views.
+                        </p>
+                    </div>
 
-					<!-- Arrow 1 -->
-					<div class="hidden md:block text-park-green text-4xl mx-8">
-						<i class="fas fa-arrow-right"></i>
-					</div>
+                    <!-- Arrow 1 -->
+                    <div class="hidden md:block text-park-green text-4xl mx-8">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
 
-					<!-- Step 2 -->
-					<div class="text-center mb-8 md:mb-0">
-						<div
-							class="bg-park-green text-white rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mx-auto mb-4">
-							2
-						</div>
-						<h3 class="text-xl font-semibold text-park-green mb-4">
-							Bring the Basics
-						</h3>
-						<p class="text-gray-600 max-w-sm">
-							Water, sunscreen, and comfy shoes—then choose your
-							vibe: picnic, playground, or garden loop.
-						</p>
-					</div>
+                    <!-- Step 2 -->
+                    <div class="text-center mb-8 md:mb-0">
+                        <div
+                            class="bg-park-green text-white rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+                            2
+                        </div>
+                        <h3 class="text-xl font-semibold text-park-green mb-4">Bring the Basics</h3>
+                        <p class="text-gray-600 max-w-sm">
+                            Water, sunscreen, and comfy shoes—then choose your vibe: picnic, playground, or garden loop.
+                        </p>
+                    </div>
 
-					<!-- Arrow 2 -->
-					<div class="hidden md:block text-park-green text-4xl mx-8">
-						<i class="fas fa-arrow-right"></i>
-					</div>
+                    <!-- Arrow 2 -->
+                    <div class="hidden md:block text-park-green text-4xl mx-8">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
 
-					<!-- Step 3 -->
-					<div class="text-center mb-8 md:mb-0">
-						<div
-							class="bg-park-green text-white rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mx-auto mb-4">
-							3
-						</div>
-						<h3 class="text-xl font-semibold text-park-green mb-4">
-							Explore & Relax
-						</h3>
-						<p class="text-gray-600 max-w-sm">
-							Unplug for a bit, enjoy the greenery, and check out
-							any pop-up activities happening in the plaza.
-						</p>
-					</div>
-				</div>
-			</div>
-		</section>
-		<!-- Team Section -->
-		<section id="team" class="py-20 bg-white">
-			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-				<div class="text-center mb-16">
-					<p class="text-park-amber text-sm font-semibold mb-2">
-						Here for the Community
-					</p>
-					<h2
-						class="text-4xl md:text-5xl font-bold text-park-green mb-6">
-						Meet the Park Team
-					</h2>
-					<p class="text-center text-gray-600 max-w-4xl mx-auto">
-						A friendly (fictional) group dedicated to keeping
-						Figueroa Park clean, safe, and welcoming! from events to
-						daily care.
-					</p>
-				</div>
-				<!-- Team Grid -->
-				<div
-					class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-					<!-- Team Member 1 -->
-					<div class="text-center">
-						<!-- Profile Picture -->
-						<div
-							class="w-32 h-32 bg-gray-300 rounded-full mx-auto mb-4 bg-cover bg-center ring-4 ring-park-green ring-opacity-20"
-							style="
-								background-image: url('/imgs/ana.jpg');
-							"></div>
+                    <!-- Step 3 -->
+                    <div class="text-center mb-8 md:mb-0">
+                        <div
+                            class="bg-park-green text-white rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+                            3
+                        </div>
+                        <h3 class="text-xl font-semibold text-park-green mb-4">Explore & Relax</h3>
+                        <p class="text-gray-600 max-w-sm">
+                            Unplug for a bit, enjoy the greenery, and check out any pop-up activities happening in the
+                            plaza.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Team Section -->
+        <section id="team" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <p class="text-park-amber text-sm font-semibold mb-2">Here for the Community</p>
+                    <h2 class="text-4xl md:text-5xl font-bold text-park-green mb-6">Meet the Park Team</h2>
+                    <p class="text-center text-gray-600 max-w-4xl mx-auto">
+                        A friendly (fictional) group dedicated to keeping Figueroa Park clean, safe, and welcoming! from
+                        events to daily care.
+                    </p>
+                </div>
+                <!-- Team Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Team Member 1 -->
+                    <div class="text-center">
+                        <!-- Profile Picture -->
+                        <div
+                            class="w-32 h-32 bg-gray-300 rounded-full mx-auto mb-4 bg-cover bg-center ring-4 ring-park-green ring-opacity-20"
+                            style="background-image: url('/imgs/ana.jpg')"></div>
 
-						<!-- Name -->
-						<h3 class="text-xl font-semibold text-park-green mb-2">
-							Ana Morales
-						</h3>
+                        <!-- Name -->
+                        <h3 class="text-xl font-semibold text-park-green mb-2">Ana Morales</h3>
 
-						<!-- Role -->
-						<p class="text-park-amber font-medium mb-2">
-							Park Manager
-						</p>
+                        <!-- Role -->
+                        <p class="text-park-amber font-medium mb-2">Park Manager</p>
 
-						<!-- Description -->
-						<p class="text-gray-600 text-sm">
-							Coordinates park operations, vendors, and community
-							programming for Figueroa Plaza events.
-						</p>
+                        <!-- Description -->
+                        <p class="text-gray-600 text-sm">
+                            Coordinates park operations, vendors, and community programming for Figueroa Plaza events.
+                        </p>
 
-						<!-- Social Links -->
-						<div class="flex justify-center space-x-4 mt-4">
-							<a
-								href="#"
-								class="text-gray-400 hover:text-park-green transition">
-								<i class="fab fa-linkedin text-xl"></i>
-							</a>
-							<a
-								href="#"
-								class="text-gray-400 hover:text-park-green transition">
-								<i class="fab fa-twitter text-xl"></i>
-							</a>
-						</div>
-					</div>
+                        <!-- Social Links -->
+                        <div class="flex justify-center space-x-4 mt-4">
+                            <a href="#" class="text-gray-400 hover:text-park-green transition">
+                                <i class="fab fa-linkedin text-xl"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-park-green transition">
+                                <i class="fab fa-twitter text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
 
-					<!-- Team Member 2 -->
-					<div class="text-center">
-						<div
-							class="w-32 h-32 bg-gray-300 rounded-full mx-auto mb-4 bg-cover bg-center ring-4 ring-park-green ring-opacity-20"
-							style="
-								background-image: url('/imgs/daniel.jpg');
-							"></div>
-						<h3 class="text-xl font-semibold text-park-green mb-2">
-							Daniel Park
-						</h3>
-						<p class="text-park-amber font-medium mb-2">
-							Urban Trails Lead
-						</p>
-						<p class="text-gray-600 text-sm">
-							Helps design walk routes, signage, and accessibility
-							improvements so everyone can enjoy the park.
-						</p>
-						<div class="flex justify-center space-x-4 mt-4">
-							<a
-								href="#"
-								class="text-gray-400 hover:text-park-green transition">
-								<i class="fab fa-linkedin text-xl"></i>
-							</a>
-							<a
-								href="#"
-								class="text-gray-400 hover:text-park-green transition">
-								<i class="fab fa-twitter text-xl"></i>
-							</a>
-						</div>
-					</div>
+                    <!-- Team Member 2 -->
+                    <div class="text-center">
+                        <div
+                            class="w-32 h-32 bg-gray-300 rounded-full mx-auto mb-4 bg-cover bg-center ring-4 ring-park-green ring-opacity-20"
+                            style="background-image: url('/imgs/daniel.jpg')"></div>
+                        <h3 class="text-xl font-semibold text-park-green mb-2">Daniel Park</h3>
+                        <p class="text-park-amber font-medium mb-2">Urban Trails Lead</p>
+                        <p class="text-gray-600 text-sm">
+                            Helps design walk routes, signage, and accessibility improvements so everyone can enjoy the
+                            park.
+                        </p>
+                        <div class="flex justify-center space-x-4 mt-4">
+                            <a href="#" class="text-gray-400 hover:text-park-green transition">
+                                <i class="fab fa-linkedin text-xl"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-park-green transition">
+                                <i class="fab fa-twitter text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
 
-					<!-- Team Member 3 -->
-					<div class="text-center">
-						<div
-							class="w-32 h-32 bg-gray-300 rounded-full mx-auto mb-4 bg-cover bg-center ring-4 ring-park-green ring-opacity-20"
-							style="
-								background-image: url('/imgs/riley.jpg');
-							"></div>
-						<h3 class="text-xl font-semibold text-park-green mb-2">
-							Riley Nguyen
-						</h3>
-						<p class="text-park-amber font-medium mb-2">
-							Programs Coordinator
-						</p>
-						<p class="text-gray-600 text-sm">
-							Plans youth activities, weekend pop-ups, and
-							seasonal events that bring energy to Downtown LA.
-						</p>
-						<div class="flex justify-center space-x-4 mt-4">
-							<a
-								href="#"
-								class="text-gray-400 hover:text-park-green transition">
-								<i class="fab fa-linkedin text-xl"></i>
-							</a>
-							<a
-								href="#"
-								class="text-gray-400 hover:text-park-green transition">
-								<i class="fab fa-twitter text-xl"></i>
-							</a>
-						</div>
-					</div>
+                    <!-- Team Member 3 -->
+                    <div class="text-center">
+                        <div
+                            class="w-32 h-32 bg-gray-300 rounded-full mx-auto mb-4 bg-cover bg-center ring-4 ring-park-green ring-opacity-20"
+                            style="background-image: url('/imgs/riley.jpg')"></div>
+                        <h3 class="text-xl font-semibold text-park-green mb-2">Riley Nguyen</h3>
+                        <p class="text-park-amber font-medium mb-2">Programs Coordinator</p>
+                        <p class="text-gray-600 text-sm">
+                            Plans youth activities, weekend pop-ups, and seasonal events that bring energy to Downtown
+                            LA.
+                        </p>
+                        <div class="flex justify-center space-x-4 mt-4">
+                            <a href="#" class="text-gray-400 hover:text-park-green transition">
+                                <i class="fab fa-linkedin text-xl"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-park-green transition">
+                                <i class="fab fa-twitter text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
 
-					<!-- Team Member 4 -->
-					<div class="text-center">
-						<div
-							class="w-32 h-32 bg-gray-300 rounded-full mx-auto mb-4 bg-cover bg-center ring-4 ring-park-green ring-opacity-20"
-							style="
-								background-image: url('/imgs/jordan.jpg');
-							"></div>
-						<h3 class="text-xl font-semibold text-park-green mb-2">
-							Jordan Ellis
-						</h3>
-						<p class="text-park-amber font-medium mb-2">
-							Park Safety Liaison
-						</p>
-						<p class="text-gray-600 text-sm">
-							Supports a welcoming environment through wayfinding,
-							community outreach, and park ambassador programs.
-						</p>
-						<div class="flex justify-center space-x-4 mt-4">
-							<a
-								href="#"
-								class="text-gray-400 hover:text-park-green transition">
-								<i class="fab fa-linkedin text-xl"></i>
-							</a>
-							<a
-								href="#"
-								class="text-gray-400 hover:text-park-green transition">
-								<i class="fab fa-twitter text-xl"></i>
-							</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<!-- Blogs / News Section -->
-		<section id="blogs" class="py-20 bg-gray-50">
-			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-				<div class="text-center mb-16">
-					<p class="text-park-amber text-sm font-semibold mb-2">
-						Latest from the Plaza
-					</p>
-					<h2
-						class="text-4xl md:text-5xl font-bold text-park-green mb-6">
-						Park News & Updates
-					</h2>
-					<p class="text-xl text-gray-600 max-w-4xl mx-auto">
-						Announcements, upcoming events, and seasonal highlights
-						for our fictional Figueroa Park community.
-					</p>
-				</div>
+                    <!-- Team Member 4 -->
+                    <div class="text-center">
+                        <div
+                            class="w-32 h-32 bg-gray-300 rounded-full mx-auto mb-4 bg-cover bg-center ring-4 ring-park-green ring-opacity-20"
+                            style="background-image: url('/imgs/jordan.jpg')"></div>
+                        <h3 class="text-xl font-semibold text-park-green mb-2">Jordan Ellis</h3>
+                        <p class="text-park-amber font-medium mb-2">Park Safety Liaison</p>
+                        <p class="text-gray-600 text-sm">
+                            Supports a welcoming environment through wayfinding, community outreach, and park ambassador
+                            programs.
+                        </p>
+                        <div class="flex justify-center space-x-4 mt-4">
+                            <a href="#" class="text-gray-400 hover:text-park-green transition">
+                                <i class="fab fa-linkedin text-xl"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-park-green transition">
+                                <i class="fab fa-twitter text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Blogs / News Section -->
+        <section id="blogs" class="py-20 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <p class="text-park-amber text-sm font-semibold mb-2">Latest from the Plaza</p>
+                    <h2 class="text-4xl md:text-5xl font-bold text-park-green mb-6">Park News & Updates</h2>
+                    <p class="text-xl text-gray-600 max-w-4xl mx-auto">
+                        Announcements, upcoming events, and seasonal highlights for our fictional Figueroa Park
+                        community.
+                    </p>
+                </div>
 
-				<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-					<!-- News Card 1 -->
-					<div
-						class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300 group">
-						<div
-							class="h-48 bg-cover bg-center transition-transform duration-300 group-hover:scale-105"
-							style="
-								background-image: url('/imgs/lunchtime.jpg');
-							"></div>
-						<div class="p-8">
-							<p
-								class="text-park-amber text-sm font-semibold mb-2">
-								Weekly
-							</p>
-							<h3
-								class="text-xl font-semibold text-park-green mb-3">
-								Lunchtime Walk Club
-							</h3>
-							<p class="text-gray-600">
-								A friendly mid-day loop around the Garden
-								Walk—easy pace, good vibes, and a quick reset
-								before heading back downtown.
-							</p>
-						</div>
-					</div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- News Card 1 -->
+                    <div
+                        class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300 group">
+                        <div
+                            class="h-48 bg-cover bg-center transition-transform duration-300 group-hover:scale-105"
+                            style="background-image: url('/imgs/lunchtime.jpg')"></div>
+                        <div class="p-8">
+                            <p class="text-park-amber text-sm font-semibold mb-2">Weekly</p>
+                            <h3 class="text-xl font-semibold text-park-green mb-3">Lunchtime Walk Club</h3>
+                            <p class="text-gray-600">
+                                A friendly mid-day loop around the Garden Walk—easy pace, good vibes, and a quick reset
+                                before heading back downtown.
+                            </p>
+                        </div>
+                    </div>
 
-					<!-- News Card 2 -->
-					<div
-						class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300 group">
-						<div
-							class="h-48 bg-cover bg-center transition-transform duration-300 group-hover:scale-105"
-							style="
-								background-image: url('/imgs/yoga.jpg');
-							"></div>
-						<div class="p-8">
-							<p
-								class="text-park-amber text-sm font-semibold mb-2">
-								Seasonal
-							</p>
-							<h3
-								class="text-xl font-semibold text-park-green mb-3">
-								Sunset Yoga in the Plaza
-							</h3>
-							<p class="text-gray-600">
-								Bring a mat and unwind with an evening stretch
-								session as the skyline cools off beginner
-								friendly and open to all.
-							</p>
-						</div>
-					</div>
+                    <!-- News Card 2 -->
+                    <div
+                        class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300 group">
+                        <div
+                            class="h-48 bg-cover bg-center transition-transform duration-300 group-hover:scale-105"
+                            style="background-image: url('/imgs/yoga.jpg')"></div>
+                        <div class="p-8">
+                            <p class="text-park-amber text-sm font-semibold mb-2">Seasonal</p>
+                            <h3 class="text-xl font-semibold text-park-green mb-3">Sunset Yoga in the Plaza</h3>
+                            <p class="text-gray-600">
+                                Bring a mat and unwind with an evening stretch session as the skyline cools off beginner
+                                friendly and open to all.
+                            </p>
+                        </div>
+                    </div>
 
-					<!-- News Card 3 -->
-					<div
-						class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300 group">
-						<div
-							class="h-48 bg-cover bg-center transition-transform duration-300 group-hover:scale-105"
-							style="
-								background-image: url('/imgs/market.jpg');
-							"></div>
-						<div class="p-8">
-							<p
-								class="text-park-amber text-sm font-semibold mb-2">
-								Monthly
-							</p>
-							<h3
-								class="text-xl font-semibold text-park-green mb-3">
-								Plaza Pop-Up Market
-							</h3>
-							<p class="text-gray-600">
-								Local makers, snacks, and live music—turn your
-								park stroll into a mini DTLA adventure.
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<!-- Stay in the Loop Section -->
-		<section class="py-20 bg-gray-50">
-			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-				<div
-					class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-					<!-- Left Column: Text Content -->
-					<div>
-						<h2
-							class="text-4xl md:text-5xl font-bold text-park-green mb-6">
-							Stay in the Loop
-						</h2>
-						<p class="text-xl text-gray-600 leading-relaxed">
-							Get updates on park events, seasonal activities, and
-							community programs happening in Figueroa Plaza. No
-							spam! just the good stuff.
-						</p>
-					</div>
-					<!-- Right Column: Promo Card -->
-					<div class="bg-white rounded-lg p-8 shadow-lg">
-						<h2
-							class="text-3xl md:text-4xl font-bold text-park-green mb-6">
-							Get park updates in your inbox
-						</h2>
-						<p class="text-gray-600 mb-6">
-							Be the first to hear about pop-ups, fitness
-							sessions, family days, and park improvements at
-							(fictional) Figueroa Park.
-						</p>
-						<!-- Form Elements -->
-						<div class="space-y-4">
-							<input
-								type="email"
-								placeholder="@ Your email address"
-								class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-park-green focus:border-transparent" />
-							<button
-								class="w-full bg-park-amber text-white py-3 rounded-lg font-semibold hover:opacity-95 transition duration-300">
-								Subscribe
-							</button>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<!-- Contact Section -->
-		<section id="contact" class="py-20 bg-white">
-			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-				<div class="text-center mb-16">
-					<p class="text-park-amber text-sm font-semibold mb-2">
-						Questions?
-					</p>
-					<h2
-						class="text-4xl md:text-5xl font-bold text-park-green mb-6">
-						Contact Figueroa Park
-					</h2>
-					<p class="text-xl text-gray-600 max-w-4xl mx-auto">
-						This is a fictional park page for Figueroa Plaza in
-						Downtown Los Angeles, but the layout below shows how
-						contact info could be presented.
-					</p>
-				</div>
+                    <!-- News Card 3 -->
+                    <div
+                        class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300 group">
+                        <div
+                            class="h-48 bg-cover bg-center transition-transform duration-300 group-hover:scale-105"
+                            style="background-image: url('/imgs/market.jpg')"></div>
+                        <div class="p-8">
+                            <p class="text-park-amber text-sm font-semibold mb-2">Monthly</p>
+                            <h3 class="text-xl font-semibold text-park-green mb-3">Plaza Pop-Up Market</h3>
+                            <p class="text-gray-600">
+                                Local makers, snacks, and live music—turn your park stroll into a mini DTLA adventure.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Stay in the Loop Section -->
+        <section class="py-20 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <!-- Left Column: Text Content -->
+                    <div>
+                        <h2 class="text-4xl md:text-5xl font-bold text-park-green mb-6">Stay in the Loop</h2>
+                        <p class="text-xl text-gray-600 leading-relaxed">
+                            Get updates on park events, seasonal activities, and community programs happening in
+                            Figueroa Plaza. No spam! just the good stuff.
+                        </p>
+                    </div>
+                    <!-- Right Column: Promo Card -->
+                    <div class="bg-white rounded-lg p-8 shadow-lg">
+                        <h2 class="text-3xl md:text-4xl font-bold text-park-green mb-6">
+                            Get park updates in your inbox
+                        </h2>
+                        <p class="text-gray-600 mb-6">
+                            Be the first to hear about pop-ups, fitness sessions, family days, and park improvements at
+                            (fictional) Figueroa Park.
+                        </p>
+                        <!-- Form Elements -->
+                        <div class="space-y-4">
+                            <input
+                                type="email"
+                                placeholder="@ Your email address"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-park-green focus:border-transparent" />
+                            <button
+                                class="w-full bg-park-amber text-white py-3 rounded-lg font-semibold hover:opacity-95 transition duration-300">
+                                Subscribe
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <p class="text-park-amber text-sm font-semibold mb-2">Questions?</p>
+                    <h2 class="text-4xl md:text-5xl font-bold text-park-green mb-6">Contact Figueroa Park</h2>
+                    <p class="text-xl text-gray-600 max-w-4xl mx-auto">
+                        This is a fictional park page for Figueroa Plaza in Downtown Los Angeles, but the layout below
+                        shows how contact info could be presented.
+                    </p>
+                </div>
 
-				<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-					<!-- Left: Details -->
-					<div class="bg-gray-50 rounded-lg p-8 shadow-lg">
-						<h3 class="text-2xl font-bold text-park-green mb-6">
-							Visitor Details
-						</h3>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+                    <!-- Left: Details -->
+                    <div class="bg-gray-50 rounded-lg p-8 shadow-lg">
+                        <h3 class="text-2xl font-bold text-park-green mb-6">Visitor Details</h3>
 
-						<div class="space-y-5">
-							<div class="flex items-start gap-4">
-								<div class="text-park-green text-2xl">
-									<i class="fas fa-location-dot"></i>
-								</div>
-								<div>
-									<p class="font-semibold text-gray-900">
-										Location
-									</p>
-									<p class="text-gray-600">
-										Figueroa Plaza, Downtown Los Angeles, CA
-									</p>
-								</div>
-							</div>
+                        <div class="space-y-5">
+                            <div class="flex items-start gap-4">
+                                <div class="text-park-green text-2xl">
+                                    <i class="fas fa-location-dot"></i>
+                                </div>
+                                <div>
+                                    <p class="font-semibold text-gray-900">Location</p>
+                                    <p class="text-gray-600">Figueroa Plaza, Downtown Los Angeles, CA</p>
+                                </div>
+                            </div>
 
-							<div class="flex items-start gap-4">
-								<div class="text-park-green text-2xl">
-									<i class="fas fa-clock"></i>
-								</div>
-								<div>
-									<p class="font-semibold text-gray-900">
-										Hours
-									</p>
-									<p class="text-gray-600">
-										Daily: 6:00 AM – 10:00 PM (Fictional
-										hours)
-									</p>
-								</div>
-							</div>
+                            <div class="flex items-start gap-4">
+                                <div class="text-park-green text-2xl">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div>
+                                    <p class="font-semibold text-gray-900">Hours</p>
+                                    <p class="text-gray-600">Daily: 6:00 AM – 10:00 PM (Fictional hours)</p>
+                                </div>
+                            </div>
 
-							<div class="flex items-start gap-4">
-								<div class="text-park-green text-2xl">
-									<i class="fas fa-circle-info"></i>
-								</div>
-								<div>
-									<p class="font-semibold text-gray-900">
-										Park Notes
-									</p>
-									<p class="text-gray-600">
-										Leashed pets welcome, picnic areas
-										available, and events may require free
-										RSVP.
-									</p>
-								</div>
-							</div>
-						</div>
-					</div>
+                            <div class="flex items-start gap-4">
+                                <div class="text-park-green text-2xl">
+                                    <i class="fas fa-circle-info"></i>
+                                </div>
+                                <div>
+                                    <p class="font-semibold text-gray-900">Park Notes</p>
+                                    <p class="text-gray-600">
+                                        Leashed pets welcome, picnic areas available, and events may require free RSVP.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-					<!-- Right: Form -->
-					<div class="bg-gray-50 rounded-lg p-8 shadow-lg">
-						<h3 class="text-2xl font-bold text-park-green mb-6">
-							Send a Message
-						</h3>
-						<div class="space-y-4">
-							<input
-								type="text"
-								placeholder="Your name"
-								class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-park-green focus:border-transparent" />
-							<input
-								type="email"
-								placeholder="Your email"
-								class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-park-green focus:border-transparent" />
-							<textarea
-								rows="5"
-								placeholder="Your message"
-								class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-park-green focus:border-transparent"></textarea>
-							<button
-								class="w-full bg-park-amber text-white py-3 rounded-lg font-semibold hover:opacity-95 transition duration-300">
-								Send Message
-							</button>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<!-- Footer -->
-		<footer class="bg-gray-900 text-white py-12">
-			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-				<!-- Top Row -->
-				<div
-					class="flex flex-col md:flex-row flex-wrap justify-between items-center mb-8">
-					<!-- Logo -->
-					<div class="mb-4 md:mb-0">
-						<h3 class="text-2xl font-bold">Figueroa Park</h3>
-					</div>
+                    <!-- Right: Form -->
+                    <div class="bg-gray-50 rounded-lg p-8 shadow-lg">
+                        <h3 class="text-2xl font-bold text-park-green mb-6">Send a Message</h3>
+                        <div class="space-y-4">
+                            <input
+                                type="text"
+                                placeholder="Your name"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-park-green focus:border-transparent" />
+                            <input
+                                type="email"
+                                placeholder="Your email"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-park-green focus:border-transparent" />
+                            <textarea
+                                rows="5"
+                                placeholder="Your message"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-park-green focus:border-transparent"></textarea>
+                            <button
+                                class="w-full bg-park-amber text-white py-3 rounded-lg font-semibold hover:opacity-95 transition duration-300">
+                                Send Message
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Footer -->
+        <footer class="bg-gray-900 text-white py-12">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <!-- Top Row -->
+                <div class="flex flex-col md:flex-row flex-wrap justify-between items-center mb-8">
+                    <!-- Logo -->
+                    <div class="mb-4 md:mb-0">
+                        <h3 class="text-2xl font-bold">Figueroa Park</h3>
+                    </div>
 
-					<!-- Navigation Links -->
-					<div
-						class="flex flex-wrap justify-center space-x-8 mb-4 md:mb-0">
-						<a
-							href="#home"
-							class="text-gray-300 hover:text-white transition">
-							Home
-						</a>
-						<a
-							href="#about"
-							class="text-gray-300 hover:text-white transition">
-							About
-						</a>
-						<a
-							href="#blogs"
-							class="text-gray-300 hover:text-white transition">
-							News
-						</a>
-						<a
-							href="#packages"
-							class="text-gray-300 hover:text-white transition">
-							Highlights
-						</a>
-						<a
-							href="#team"
-							class="text-gray-300 hover:text-white transition">
-							Staff
-						</a>
-						<a
-							href="#contact"
-							class="text-gray-300 hover:text-white transition">
-							Contact
-						</a>
-					</div>
+                    <!-- Navigation Links -->
+                    <div class="flex flex-wrap justify-center space-x-8 mb-4 md:mb-0">
+                        <a href="#home" class="text-gray-300 hover:text-white transition"> Home </a>
+                        <a href="#about" class="text-gray-300 hover:text-white transition"> About </a>
+                        <a href="#blogs" class="text-gray-300 hover:text-white transition"> News </a>
+                        <a href="#packages" class="text-gray-300 hover:text-white transition"> Highlights </a>
+                        <a href="#team" class="text-gray-300 hover:text-white transition"> Staff </a>
+                        <a href="#contact" class="text-gray-300 hover:text-white transition"> Contact </a>
+                    </div>
 
-					<!-- Social Icons -->
-					<div class="flex space-x-4">
-						<a
-							href="#"
-							class="text-gray-300 hover:text-white transition">
-							<i class="fab fa-twitter text-2xl"></i>
-						</a>
-						<a
-							href="#"
-							class="text-gray-300 hover:text-white transition">
-							<i class="fab fa-facebook text-2xl"></i>
-						</a>
-						<a
-							href="#"
-							class="text-gray-300 hover:text-white transition">
-							<i class="fab fa-linkedin text-2xl"></i>
-						</a>
-						<a
-							href="#"
-							class="text-gray-300 hover:text-white transition">
-							<i class="fab fa-pinterest text-2xl"></i>
-						</a>
-					</div>
-				</div>
+                    <!-- Social Icons -->
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-300 hover:text-white transition">
+                            <i class="fab fa-twitter text-2xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white transition">
+                            <i class="fab fa-facebook text-2xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white transition">
+                            <i class="fab fa-linkedin text-2xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white transition">
+                            <i class="fab fa-pinterest text-2xl"></i>
+                        </a>
+                    </div>
+                </div>
 
-				<!-- Divider and Bottom Row -->
-				<div class="border-t border-gray-700 pt-8">
-					<div
-						class="flex flex-col md:flex-row justify-between items-center">
-						<!-- Copyright -->
-						<p class="text-gray-400 text-sm mb-4 md:mb-0">
-							Figueroa Park (Fictional). All Rights Reserved.
-						</p>
+                <!-- Divider and Bottom Row -->
+                <div class="border-t border-gray-700 pt-8">
+                    <div class="flex flex-col md:flex-row justify-between items-center">
+                        <!-- Copyright -->
+                        <p class="text-gray-400 text-sm mb-4 md:mb-0">
+                            Figueroa Park (Fictional). All Rights Reserved.
+                        </p>
 
-						<!-- Policy Links -->
-						<div
-							class="flex flex-wrap justify-center space-x-6 text-sm">
-							<a
-								href="#"
-								class="text-gray-400 hover:text-white transition">
-								Privacy Policy
-							</a>
-							<a
-								href="#"
-								class="text-gray-400 hover:text-white transition">
-								Terms of Service
-							</a>
-							<a
-								href="#"
-								class="text-gray-400 hover:text-white transition">
-								Cookie Policy
-							</a>
-							<a
-								href="#"
-								class="text-gray-400 hover:text-white transition">
-								Session Policy
-							</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</footer>
-	</body>
+                        <!-- Policy Links -->
+                        <div class="flex flex-wrap justify-center space-x-6 text-sm">
+                            <a href="#" class="text-gray-400 hover:text-white transition"> Privacy Policy </a>
+                            <a href="#" class="text-gray-400 hover:text-white transition"> Terms of Service </a>
+                            <a href="#" class="text-gray-400 hover:text-white transition"> Cookie Policy </a>
+                            <a href="#" class="text-gray-400 hover:text-white transition"> Session Policy </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
 </html>
